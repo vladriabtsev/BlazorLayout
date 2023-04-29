@@ -18,10 +18,12 @@ namespace SoloX.BlazorLayout.Containers.Grid
         ///<inheritdoc/>
         protected override void AddToGrid(GridContainer gridContainer)
         {
+#pragma warning disable CA1510 // Use ArgumentNullException throw helper
             if (gridContainer == null)
             {
                 throw new ArgumentNullException(nameof(gridContainer));
             }
+#pragma warning restore CA1510 // Use ArgumentNullException throw helper
 
             gridContainer.Add(this);
         }

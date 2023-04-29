@@ -3,7 +3,7 @@
   <Import Project="..\..\SharedProperties.props" />
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
@@ -13,9 +13,9 @@
 
   <ItemGroup>
 
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.5" />
 
-    <PackageReference Include="SoloX.CodeQuality.Prod" Version="2.0.8">
+    <PackageReference Include="SoloX.CodeQuality.Prod" Version="2.0.16">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

@@ -12,6 +12,7 @@ using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+//using System.Reflection.Emit;
 using System.Threading.Tasks;
 
 namespace SoloX.BlazorLayout.Services.Impl
@@ -19,8 +20,12 @@ namespace SoloX.BlazorLayout.Services.Impl
     /// <summary>
     /// Resize observer service implementation.
     /// </summary>
-    public class ResizeObserverService : IResizeObserverService, IAsyncDisposable
+    public partial class ResizeObserverService : IResizeObserverService, IAsyncDisposable
     {
+        [LoggerMessageAttribute(EventId = 0, Level = LogLevel.Debug, Message = "{Msg}")]
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+        public partial void LogDebugMessage(string msg);
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         internal const string RegisterResizeCallBack = "resizeManager.registerResizeCallBack";
         internal const string UnregisterResizeCallBack = "resizeManager.unregisterResizeCallBack";
         internal const string RegisterMutationObserver = "resizeManager.registerMutationObserver";
@@ -78,7 +83,7 @@ namespace SoloX.BlazorLayout.Services.Impl
                     }
                     catch (TaskCanceledException e)
                     {
-                        this.logger.LogDebug(e.Message);
+                        this.LogDebugMessage(e.Message);
                     }
 
                     objectRef.Dispose();
@@ -113,7 +118,7 @@ namespace SoloX.BlazorLayout.Services.Impl
                     }
                     catch (TaskCanceledException e)
                     {
-                        this.logger.LogDebug(e.Message);
+                        this.LogDebugMessage(e.Message);
                     }
                 });
 
@@ -151,7 +156,7 @@ namespace SoloX.BlazorLayout.Services.Impl
                 }
                 catch (TaskCanceledException e)
                 {
-                    this.logger.LogDebug(e.Message);
+                    this.LogDebugMessage(e.Message);
                 }
             }
 
@@ -189,10 +194,12 @@ namespace SoloX.BlazorLayout.Services.Impl
 
             public ValueTask DisposeAsync()
             {
+#pragma warning disable CA1513 // Use ObjectDisposedException throw helper
                 if (this.isDisposed)
                 {
                     throw new ObjectDisposedException($"Object {this.id} already disposed.");
                 }
+#pragma warning restore CA1513 // Use ObjectDisposedException throw helper
 
                 this.isDisposed = true;
                 return this.disposeHandler();

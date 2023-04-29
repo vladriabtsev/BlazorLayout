@@ -38,10 +38,12 @@ namespace SoloX.BlazorLayout.Containers.Grid.Impl
         /// <param name="dimension">The dimension entry to add.</param>
         public void Add(TDimension dimension)
         {
+#pragma warning disable CA1510 // Use ArgumentNullException throw helper
             if (dimension == null)
             {
                 throw new ArgumentNullException(nameof(dimension));
             }
+#pragma warning restore CA1510 // Use ArgumentNullException throw helper
 
             if (!string.IsNullOrEmpty(dimension.Name))
             {
@@ -84,10 +86,12 @@ namespace SoloX.BlazorLayout.Containers.Grid.Impl
         /// <returns></returns>
         public int GetDimensionIndex(object nameOrIndex)
         {
+#pragma warning disable CA1510 // Use ArgumentNullException throw helper
             if (nameOrIndex == null)
             {
                 throw new ArgumentNullException(nameof(nameOrIndex));
             }
+#pragma warning restore CA1510 // Use ArgumentNullException throw helper
 
             if (nameOrIndex is string name)
             {
