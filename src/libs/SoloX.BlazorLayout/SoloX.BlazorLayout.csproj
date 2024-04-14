@@ -11,14 +11,15 @@
     <SupportedPlatform Include="browser" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[7.0.18,8)" Condition="'$(TargetFramework)' == 'net7.0'" />
+  </ItemGroup>
 
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.18" Condition="'$(TargetFramework)' == 'net7.0'" />
+  <ItemGroup>
     <PackageReference Include="SoloX.CodeQuality.Prod" Version="2.1.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-
   </ItemGroup>
 
 </Project>
