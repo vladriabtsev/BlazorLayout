@@ -3,7 +3,7 @@
   <Import Project="..\..\SharedProperties.props" />
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
@@ -12,7 +12,10 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[7.0.18,8)" Condition="'$(TargetFramework)' == 'net7.0'" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[7.0.18,8)" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[8.0.4,9)" />
   </ItemGroup>
 
   <ItemGroup>
