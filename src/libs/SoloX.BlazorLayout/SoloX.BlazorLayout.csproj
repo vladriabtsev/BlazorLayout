@@ -3,9 +3,9 @@
   <Import Project="..\..\SharedProperties.props" />
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
+  <Import Project="..\..\..\..\vSharpStudio\Solution.targets"/>
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
