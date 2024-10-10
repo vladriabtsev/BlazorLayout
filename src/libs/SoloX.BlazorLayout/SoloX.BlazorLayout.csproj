@@ -5,7 +5,7 @@
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
-  <Import Project="..\..\..\..\vSharpStudio\Solution.targets"/>
+  <Import Project="..\..\..\..\vSharpStudio\Solution.targets" />
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="SoloX.CodeQuality.Prod" Version="2.1.0">
+    <PackageReference Include="SoloX.CodeQuality.Prod" Version="2.2.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
