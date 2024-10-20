@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="SoloX.CodeQuality.Prod" Version="2.2.1">
+    <PackageReference Include="SoloX.CodeQuality.Prod" Version="2.2.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
