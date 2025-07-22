@@ -13,14 +13,14 @@
 
   <!--https://learn.microsoft.com/en-us/nuget/concepts/package-versioning?tabs=semver20sort#version-ranges-->
   <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[8.0.11,9)" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[8.0.18,9)" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[9.0.0,10)" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="[9.0.7,10)" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="SoloX.CodeQuality.Prod" Version="2.3.0">
+    <PackageReference Include="SoloX.CodeQuality.Prod" Version="2.3.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
