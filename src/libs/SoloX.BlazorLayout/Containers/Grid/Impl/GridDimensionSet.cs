@@ -6,11 +6,11 @@
 // </copyright>
 // ----------------------------------------------------------------------
 
-using SoloX.BlazorLayout.Core;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using SoloX.BlazorLayout.Core;
 
 namespace SoloX.BlazorLayout.Containers.Grid.Impl
 {

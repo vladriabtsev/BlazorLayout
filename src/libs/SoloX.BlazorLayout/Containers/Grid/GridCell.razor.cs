@@ -6,8 +6,8 @@
 // </copyright>
 // ----------------------------------------------------------------------
 
-using Microsoft.AspNetCore.Components;
 using System;
+using Microsoft.AspNetCore.Components;
 
 namespace SoloX.BlazorLayout.Containers.Grid
 {

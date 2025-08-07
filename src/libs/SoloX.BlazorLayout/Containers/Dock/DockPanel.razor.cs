@@ -6,10 +6,10 @@
 // </copyright>
 // ----------------------------------------------------------------------
 
-using Microsoft.AspNetCore.Components;
-using SoloX.BlazorLayout.Core;
 using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Components;
+using SoloX.BlazorLayout.Core;
 
 namespace SoloX.BlazorLayout.Containers.Dock
 {

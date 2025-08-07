@@ -6,9 +6,9 @@
 // </copyright>
 // ----------------------------------------------------------------------
 
+using System;
 using Microsoft.AspNetCore.Components;
 using SoloX.BlazorLayout.Core;
-using System;
 
 namespace SoloX.BlazorLayout.Containers.Grid
 {

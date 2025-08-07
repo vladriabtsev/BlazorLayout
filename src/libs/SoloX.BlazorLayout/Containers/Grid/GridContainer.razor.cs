@@ -8,8 +8,8 @@
 
 using System;
 using Microsoft.AspNetCore.Components;
-using SoloX.BlazorLayout.Core;
 using SoloX.BlazorLayout.Containers.Grid.Impl;
+using SoloX.BlazorLayout.Core;
 
 namespace SoloX.BlazorLayout.Containers.Grid
 {
